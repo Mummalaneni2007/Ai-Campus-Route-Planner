@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fc;
+    color: #172554;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #071b3d;
+    color: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #fbbf24;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #fbbf24;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 440px;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(5, 20, 50, 0.95),
+            rgba(25, 65, 135, 0.85)
+        ),
+        url('https://images.unsplash.com/photo-1562774053-701939374585?w=1600');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    color: white;
+}
+
+.welcome {
+    color: #fbbf24;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #fbbf24;
+}
+
+.hero-description {
+    max-width: 550px;
+    line-height: 1.8;
+    color: #dbeafe;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 28px;
+    background: #fbbf24;
+    color: #071b3d;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.address {
+    margin-top: 25px;
+    color: #dbeafe;
+    font-size: 13px;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading p {
+    color: #d19a13;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: #0b2451;
+    margin: 12px 0;
+}
+
+.section-heading span {
+    color: #64748b;
+}
+
+/* ROUTE PLANNER */
+
+.planner-section {
+    padding: 75px 20px;
+}
+
+.planner-card {
+    max-width: 550px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(15, 40, 90, 0.12);
+}
+
+.planner-icon {
+    font-size: 40px;
+    text-align: center;
+}
+
+.planner-card h2 {
+    text-align: center;
+    margin: 12px 0;
+    color: #12346b;
+}
+
+.planner-card > p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.planner-card label {
+    display: block;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+.planner-card select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.planner-card button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(120deg, #12346b, #2563eb);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.planner-card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.planner-card .reset-button {
+    margin-top: 12px;
+    background: #64748b;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 9px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* INTERACTIVE MAP */
+
+.map-section {
+    padding: 70px 8%;
+    background: #eaf0fa;
+}
+
+.map-card {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(15, 40, 90, 0.12);
+}
+
+#map {
+    width: 100%;
+    height: 520px;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.map-note {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* MAP POPUPS */
+
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.leaflet-popup-content {
+    font-size: 13px;
+}
+
+/* ROUTE INFORMATION */
+
+.route-info {
+    color: #12346b;
+    font-weight: 600;
+}
+
+.route-error {
+    color: #b45309;
+}
+
+/* CAMPUS LOCATIONS */
+
+.locations-section {
+    padding: 70px 8%;
+    background: #f4f7fc;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.location-card {
+    background: white;
+    padding: 28px 18px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(15, 40, 90, 0.07);
+    transition: 0.3s;
+}
+
+.location-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(15, 40, 90, 0.15);
+}
+
+.location-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.location-card h3 {
+    color: #12346b;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.location-card p {
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+footer {
+    background: #071b3d;
+    color: white;
+    text-align: center;
+    padding: 40px 15px;
+}
+
+footer h2 {
+    color: #fbbf24;
+    margin-bottom: 12px;
+}
+
+footer p {
+    margin: 8px;
+    font-size: 13px;
+    color: #dbeafe;
+}
+
+.copyright {
+    margin-top: 25px;
+    color: #94a3b8;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .location-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .planner-card {
+        padding: 25px;
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .map-section {
+        padding: 50px 15px;
+    }
+
+    #map {
+        height: 400px;
+    }
+}

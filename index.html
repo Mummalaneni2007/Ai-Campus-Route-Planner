@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignan University Campus Route Planner</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">
+            VIGNAN
+            <span>UNIVERSITY</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#planner">Route Planner</a>
+            <a href="#map-section">Campus Map</a>
+            <a href="#locations">Locations</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <p class="welcome">WELCOME TO VIGNAN UNIVERSITY</p>
+
+            <h1>
+                Explore Your Campus
+                <span>With Ease</span>
+            </h1>
+
+            <p class="hero-description">
+                Find campus buildings, explore university locations
+                and plan your routes with our interactive campus
+                navigation system.
+            </p>
+
+            <a href="#planner" class="hero-button">
+                Explore Campus
+            </a>
+
+            <p class="address">
+                Vadlamudi, Guntur, Andhra Pradesh
+            </p>
+        </div>
+    </header>
+
+    <!-- ROUTE PLANNER -->
+    <section class="planner-section" id="planner">
+
+        <div class="section-heading">
+            <p>CAMPUS NAVIGATION</p>
+            <h2>Find Your Route</h2>
+            <span>Choose your starting point and destination.</span>
+        </div>
+
+        <div class="planner-card">
+
+            <div class="planner-icon">📍</div>
+
+            <h2>Campus Route Planner</h2>
+
+            <p>Find a route between university locations.</p>
+
+            <label for="start">Starting Location</label>
+
+            <select id="start">
+                <option value="">Select Starting Location</option>
+            </select>
+
+            <label for="destination">Destination</label>
+
+            <select id="destination">
+                <option value="">Select Destination</option>
+            </select>
+
+            <button id="find-route">
+                Find Shortest Route
+            </button>
+
+            <button id="reset-route" class="reset-button">
+                Reset Route
+                <button onclick="showCurrentLocation()">
+    Find My Location
+</button>
+            </button>
+
+            <div id="result" aria-live="polite">
+                Your route information will appear here.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE MAP -->
+    <section class="map-section" id="map-section">
+
+        <div class="section-heading">
+            <p>EXPLORE VIGNAN</p>
+            <h2>Vignan University Live Map</h2>
+            <span>Explore campus locations and view selected routes.</span>
+        </div>
+
+        <div class="map-card">
+            <div id="map"></div>
+
+            <p class="map-note">
+                Map locations are approximate demonstration positions.
+                Verify building positions before real-world navigation.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- CAMPUS LOCATIONS -->
+    <section class="locations-section" id="locations">
+
+        <div class="section-heading">
+            <p>DISCOVER OUR CAMPUS</p>
+            <h2>Campus Locations</h2>
+            <span>Important places around Vignan University.</span>
+        </div>
+
+        <div class="location-grid">
+
+            <div class="location-card">
+                <div class="location-icon">🏫</div>
+                <h3>Main Building</h3>
+                <p>University main building.</p>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">📚</div>
+                <h3>Visvesvaraya Block</h3>
+                <p>Academic block.</p>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">💊</div>
+                <h3>Pharmacy College</h3>
+                <p>Pharmacy department.</p>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">🏢</div>
+                <h3>U Block</h3>
+                <p>University academic facilities.</p>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">⚽</div>
+                <h3>Playground</h3>
+                <p>Sports and outdoor activities.</p>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">🎾</div>
+                <h3>Tennis Courts</h3>
+                <p>Tennis and sports facilities.</p>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">☕</div>
+                <h3>Caffe Club</h3>
+                <p>Campus refreshment area.</p>
+            </div>
+
+            <div class="location-card">
+                <div class="location-icon">🍽️</div>
+                <h3>Meat and Eat</h3>
+                <p>Food outlet near the campus.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>VIGNAN UNIVERSITY</h2>
+        <p>Campus Route Planner</p>
+        <p>Vadlamudi, Guntur, Andhra Pradesh</p>
+
+        <p class="copyright">
+            © 2026 Vignan University Campus Route Planner
+        </p>
+    </footer>
+
+    <!-- Leaflet JavaScript MUST load before script.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
