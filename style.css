@@ -400,3 +400,32 @@ footer p {
         height: 400px;
     }
 }
+/* Mobile Responsive Design */
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    button, select, input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+}
